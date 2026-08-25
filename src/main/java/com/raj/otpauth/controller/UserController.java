@@ -17,6 +17,13 @@ public class UserController {
         this.userService = userService;
     }
 
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello from Render!";
+    }
+
+
     // CREATE
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
